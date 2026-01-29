@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package market;
+
+
+
+// Java 命名空间（服务端）
+option java_package = "market";
+option java_outer_classname = "MarketProto";
+
+enum MessageType {
+  UNKNOWN = 0;
+  SNAPSHOT = 1;
+  TICK = 2;
+}
+
+message MarketMessage {
+  MessageType type = 1;
+  bytes payload = 2;
+}
+
+message Snapshot {
+  string code = 1;
+  double preClose = 2;
+}
+
+message Tick {
+  string code = 1;
+  double price = 2;
+  int64 ts = 3;
+}
