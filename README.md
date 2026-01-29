@@ -6,3 +6,6 @@ sotck flutter client
 server code is market-24h
 
 change your local server ipaddress 
+
+effect as is
+![feature](stock_simute.gif)
